@@ -4,77 +4,81 @@ void setup()
   pinMode(LED_BUILTIN, OUTPUT);
 }
 
+// Function to represent a dot in Morse code
 void dot()
 {
   // Turn on LED for a short duration (dot)
   digitalWrite(LED_BUILTIN, HIGH);
+  // Wait for the duration of a dot
   delay(200);
   // Turn off LED after short duration
   digitalWrite(LED_BUILTIN, LOW);
-  // Pause between dot and next signal
+  // Pause between dot and next signal (inter-element gap)
   delay(950);
 }
 
+// Function to represent a dash in Morse code
 void dash()
 {
   // Turn on LED for a longer duration (dash)
   digitalWrite(LED_BUILTIN, HIGH);
+  // Wait for the duration of a dash
   delay(300);
   // Turn off LED after long duration
   digitalWrite(LED_BUILTIN, LOW);
-  // Pause between dash and next signal
+  // Pause between dash and next signal (inter-element gap)
   delay(750);
 }
 
 void loop() 
 {
-  // putting name kaushik through morse code
+  // Representing the name "kaushik" in Morse code
   
   // Morse code for 'K'
-  dash();
-  dot();
-  dash();
-  // Pause between characters
+  dash();  // Dash
+  dot();   // Dot
+  dash();  // Dash
+  // Pause between characters (inter-character gap)
   delay(1000);
 
   // Morse code for 'A'
-  dot();
-  dash();
-  // Pause between characters
+  dot();   // Dot
+  dash();  // Dash
+  // Pause between characters (inter-character gap)
   delay(1000);
 
   // Morse code for 'U'
-  dot();
-  dot();
-  dash();
-  // Pause between characters
+  dot();   // Dot
+  dot();   // Dot
+  dash();  // Dash
+  // Pause between characters (inter-character gap)
   delay(1000);
 
   // Morse code for 'S'
-  dot();
-  dot();
-  dot();
-  // Pause between characters
+  dot();   // Dot
+  dot();   // Dot
+  dot();   // Dot
+  // Pause between characters (inter-character gap)
   delay(1000);
 
   // Morse code for 'H'
-  dot();
-  dot();
-  dot();
-  dot();
-  // Pause between characters
+  dot();   // Dot
+  dot();   // Dot
+  dot();   // Dot
+  dot();   // Dot
+  // Pause between characters (inter-character gap)
   delay(1000);
 
   // Morse code for 'I'
-  dot();
-  dot();
-  // Pause between characters
+  dot();   // Dot
+  dot();   // Dot
+  // Pause between characters (inter-character gap)
   delay(1000);
 
-  // Morse code for 'K' (repeating)
-  dash();
-  dot();
-  dash();
-  // Pause between characters
+  // Repeating Morse code for 'K'
+  dash();  // Dash
+  dot();   // Dot
+  dash();  // Dash
+  // Pause between characters (inter-character gap)
   delay(1000);
 }
