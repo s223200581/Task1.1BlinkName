@@ -1,58 +1,80 @@
 void setup() 
 {
+  // Set the LED pin as an output
   pinMode(LED_BUILTIN, OUTPUT);
 }
 
 void dot()
 {
+  // Turn on LED for a short duration (dot)
   digitalWrite(LED_BUILTIN, HIGH);
   delay(200);
+  // Turn off LED after short duration
   digitalWrite(LED_BUILTIN, LOW);
+  // Pause between dot and next signal
   delay(950);
 }
 
 void dash()
 {
+  // Turn on LED for a longer duration (dash)
   digitalWrite(LED_BUILTIN, HIGH);
   delay(300);
+  // Turn off LED after long duration
   digitalWrite(LED_BUILTIN, LOW);
+  // Pause between dash and next signal
   delay(750);
 }
 
 void loop() 
 {
   // putting name kaushik through morse code
+  
+  // Morse code for 'K'
   dash();
   dot();
-  dash(); //k in morse code
+  dash();
+  // Pause between characters
   delay(1000);
 
+  // Morse code for 'A'
   dot();
-  dash(); // a in morse code
+  dash();
+  // Pause between characters
   delay(1000);
 
+  // Morse code for 'U'
   dot();
   dot();
-  dash(); // u in morse code
+  dash();
+  // Pause between characters
   delay(1000);
 
+  // Morse code for 'S'
   dot();
   dot();
-  dot(); // s in morse code
+  dot();
+  // Pause between characters
   delay(1000);
 
+  // Morse code for 'H'
   dot();
   dot();
   dot();
-  dot(); // h in morse code
+  dot();
+  // Pause between characters
   delay(1000);
 
+  // Morse code for 'I'
   dot();
-  dot(); // i in morse code
+  dot();
+  // Pause between characters
   delay(1000);
 
+  // Morse code for 'K' (repeating)
   dash();
   dot();
-  dash(); //k in morse code
+  dash();
+  // Pause between characters
   delay(1000);
 }
